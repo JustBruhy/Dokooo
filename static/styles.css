@@ -1,0 +1,290 @@
+/*-------------------------------------------------------------------------------------------------------------------2*/
+a {
+  display: inline-block;
+}
+
+img {
+  transition: all .0s ease;
+}
+
+a:hover img {
+  opacity: 0;
+}
+
+a:hover {
+  background: url("https://wmpics.pics/di-TB6T7.png") no-repeat 50% 50%;
+}
+
+
+.fontz{
+font-family: 'Indie Flower', cursive;
+}
+.block1 {
+  border: 2px solid black;
+  position: absolute;
+  top: 250px;
+  left: 30px;
+  width: 97%;
+  height: 600px;
+  background-color: white;
+  z-index: 1;
+
+}
+
+.block2 {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 97%;
+  height: 100px;
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+
+}
+
+.block3 {
+  position: absolute;
+  top: 300px;
+  left: 15%;
+  width: 70%;
+  height: 400px;
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+  font-size: 150%;
+}
+
+.block4 {
+  position: absolute;
+  top: 800px;
+  left: 6%;
+  width: 88%;
+  height: 100px;
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+
+
+.anim-show3{
+opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show3 2s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.3s; /* Задержка перед началом */
+}
+
+@keyframes show3{
+0%{
+opacity:0;
+}
+100% {
+opacity:100;
+}
+}
+
+.anim-show7{
+opacity:0;
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show7 2s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.3s; /* Задержка перед началом */
+}
+
+@keyframes show7{
+0%{
+opacity:0;
+}
+100% {
+opacity:100;
+}
+}
+
+.anim-show9{
+-moz-transform: translate(0px, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(0px, 0px);
+-webkit-transform: translate(0px, 0px);
+-o-transform: translate(0px, 0px);
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show9 2s infinite; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.3s; /* Задержка перед началом */
+}
+
+@keyframes show9{
+0%{
+-moz-transform: translate(0px, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(0px, 0px);
+-webkit-transform: translate(0px, 0px);
+-o-transform: translate(0px, 0px);
+}
+25% {
+-moz-transform: translate(50px, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(50px, 0px);
+-webkit-transform: translate(50px, 0px);
+-o-transform: translate(50px, 0px);
+}
+
+50% {
+-moz-transform: translate(-50px, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(-50px, 0px);
+-webkit-transform: translate(-50px, 0px);
+-o-transform: translate(-50px, 0px);
+}
+75%{
+-moz-transform: translate(0px, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(0px, 0px);
+-webkit-transform: translate(0px, 0px);
+-o-transform: translate(0px, 0px);
+}
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------1*/
+body {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: 'Indie Flower', cursive;
+  --color-primary: white;
+  --color-secondary: black;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  padding: calc(var(--space) * 2);
+  max-width: 700px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+  opacity: 100;
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+.anim-show{
+opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.3s; /* Задержка перед началом */
+}
+
+@keyframes show{
+0%{
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+
+.anim-show2{
+-moz-transform: translate(0, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(0, 0px);
+-webkit-transform: translate(0, 0px);
+-o-transform: translate(0, 0px);
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show2 1s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.0s; /* Задержка перед началом */
+}
+
+@keyframes show2{
+0%{
+-moz-transform: translate(0, 0px); /** Firefox **/
+transform: translate(0, 0px);
+-webkit-transform: translate(0, 0px); /** Safari & Chrome **/
+-o-transform: translate(0, 0px); /** Opera **/
+}
+100% {
+-moz-transform: translate(0,-320px); /** Firefox **/
+transform: translate(0,-320px);
+-webkit-transform: translate(0,-320px; /** Safari & Chrome **/
+-o-transform: translate(0,-320px); /** Opera **/
+}
+}
+
+.anim-show4{
+-moz-transform: translate(0, 0px); /*Элемент полностью прозрачный (невидимый)*/
+transform: translate(0, 0px);
+-webkit-transform: translate(0, 0px);
+-o-transform: translate(0, 0px);
+transition: 1s; /*Скорость перехода состояния элемента*/
+animation: show4 1s 1; /* Указываем название анимации, её время и количество повторов*/
+animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+animation-delay: 0.0s; /* Задержка перед началом */
+}
+
+@keyframes show4{
+0%{
+-moz-transform: translate(0, 0px); /** Firefox **/
+transform: translate(0, 0px);
+-webkit-transform: translate(0, 0px); /** Safari & Chrome **/
+-o-transform: translate(0, 0px); /** Opera **/
+}
+100% {
+-moz-transform: translate(0,-320px); /** Firefox **/
+transform: translate(0,-320px);
+-webkit-transform: translate(0,-320px; /** Safari & Chrome **/
+-o-transform: translate(0,-320px); /** Opera **/
+}
+}
