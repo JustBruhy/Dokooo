@@ -1,4 +1,107 @@
 /*-------------------------------------------------------------------------------------------------------------------2*/
+#zatemnenie:target {
+display: block;
+}
+
+
+
+element {
+
+}
+
+#a {
+    background: url("https://wmpics.pics/di-POVS.gif");
+    width:224px;
+    height:290px;
+    position:absolute;
+    top:0;
+    left: 0;
+    --main-bg-color: white;
+    --main2-bg-color: black;
+}
+.switchable input {
+    display:none;
+}
+.switchable input:checked+#a {
+    background: url("https://wmpics.pics/di-5O17.gif");
+    --main-bg-color: black;
+    --main2-bg-color: white;
+
+}
+
+
+
+#zatemnenie {
+background: rgba(102, 102, 102, 0.68);
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+display: none;
+z-index: 9999999999;
+}
+
+.pointer {
+cursor: pointer;
+}
+
+.zatemnenie-item:target {
+display: block;
+}
+
+
+
+.zatemnenie-item {
+background: rgba(102, 102, 102, 0.68);
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+display: none;
+z-index: 9999999999;
+}
+window {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 800px;
+border: 2px solid black;
+padding: 50px;
+transform: translate(-50%,-50%);
+background-color: #fafafa;
+height: 250px;
+}
+
+.appearblock {
+	margin: 0;
+    font-family: 'Indie Flower', cursive;
+	font-size: 150%;
+	line-height: inherit;
+	width: 92%;
+	border: 2px solid black;
+}
+
+div#main_text a.close_window {
+position: absolute;
+right: 10px;
+top: 4px;
+border: none;
+
+}
+a.close_window {
+	position: absolute;
+	right: 10px;
+	top: 1px;
+	border: none;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+
+
+
 a {
   display: inline-block;
 }
@@ -11,7 +114,7 @@ a:hover img {
   opacity: 0;
 }
 
-a:hover {
+#cat:hover {
   background: url("https://wmpics.pics/di-TB6T7.png") no-repeat 50% 50%;
 }
 
@@ -19,16 +122,99 @@ a:hover {
 .fontz{
 font-family: 'Indie Flower', cursive;
 }
+
+
+.blockcatlogin {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  height: 200px;
+  z-index: 1;
+  width: 10%;
+
+}
+
 .block1 {
   border: 2px solid black;
   position: absolute;
-  top: 250px;
-  left: 30px;
-  width: 97%;
-  height: 600px;
-  background-color: white;
+  top: 26%;
+  left: 5%;
+  height: 25%;
+  background-color: var(--main-bg-color);
   z-index: 1;
+  width: 18%;
 
+}
+
+.blocklogin {
+  border: 2px solid black;
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  height: 600px;
+  z-index: 1;
+  width: 40%;
+
+}
+
+.blocktext {
+  border: 2px solid black;
+  position: static;
+  margin: 10px;
+  height: 50px;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+}
+.sprite {
+  background: url('https://wmpics.pics/di-WBI8.png') 0px -100px no-repeat;
+  padding-left: 50px;
+  z-index:1;
+}
+#blablabla {
+  display: none;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+#blablabla.open {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn {
+  border-size: 0.125rem;
+  border-color: black;
+  border: 2px solid black;
+  font-size: 200%;
+  background-color: white;
+  width:200px;
+  height:100px;
+  position: static;
+  top: 50px;
+  right: 1600px;
+  display: block;
+  margin: 70px
+}
+
+.btn.first {
+  background-color: white;
+}
+
+
+.btn.first:hover {
+  background-color: white;
+  color: white;
 }
 
 .block2 {
@@ -37,7 +223,7 @@ font-family: 'Indie Flower', cursive;
   left: 30px;
   width: 97%;
   height: 100px;
-  background-color: white;
+  background-color: none;
   z-index: 1;
   text-align: center;
 
@@ -57,17 +243,131 @@ font-family: 'Indie Flower', cursive;
 
 .block4 {
   position: absolute;
-  top: 800px;
+  top: 130%;
   left: 6%;
   width: 88%;
-  height: 100px;
+  height: 10%;
   background-color: white;
   z-index: 1;
   text-align: center;
 }
 
 
+.block7 {
+  border: 2px solid black;
+  position: absolute;
+  top: 26%;
+  left: 25%;
+  width: 73%;
+  height: 62%;
+  background-color: white;
+  z-index: 1;
 
+}
+
+.buttonmain {
+  border-size: 0.125rem;
+  border-color: black;
+  border-style: solid;
+  font-size: 200%;
+  background-color: white;
+  width:60%;
+  height:17%;
+  position: static;
+  display: block;
+  margin: 20%;
+}
+
+.loginlogo {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.fogotpassword {
+  text-decoration:none;
+  color: white;
+  position: absolute;
+  bottom: 39%;
+  right: 4%;
+  font-size: 120%;
+}
+
+.signbutton {
+  margin-left: 35%;
+}
+
+@media screen and (max-width:768px) {
+    .block2 {
+        margin-left: -1.5em;
+    }
+	@keyframes show2 {
+		0% {
+			-moz-transform: translate(0, 0px); /** Firefox **/
+            transform: translate(0, 0px);
+            -webkit-transform: translate(0, 0px); /** Safari & Chrome **/
+            -o-transform: translate(0, 0px); /** Opera **/
+		}
+		100% {
+			-moz-transform: translate(0, -200px); /** Firefox **/
+            transform: translate(0, -200px);
+            -webkit-transform: translate(0, -200px); /** Safari & Chrome **/
+            -o-transform: translate(0, -200px); /** Opera **/
+		}
+	}
+	.block7 {
+	    width: 95%;
+	    margin-top: 20%;
+	    left: 10px;
+
+	}
+
+	.block1 {
+	    top: 28%;
+	    left: 2%;
+	    width: 95%;
+	    height: 10%;
+	}
+
+	.buttonmain {
+        display:inline-block;
+        margin: 1%;
+        margin-left: 3%;
+        margin-top: 1.5%;
+        height: 80%;
+        width: 28%;
+
+	}
+
+	.blocklogin {
+	    position: absolute;
+	    left: 6.5%;
+	    width: 87.5%;
+	}
+
+	.signbutton {
+	   margin-left: 30%;
+
+	}
+
+	.appearblock {
+	   width: 93%;
+
+	}
+
+	.loginlogo {
+	   margin-left: 10%;
+	}
+
+	.fogotpassword {
+	   bottom: 55%;
+	}
+
+	window {
+	   width: 90%;
+	}
+
+
+}
 
 
 .anim-show3{
@@ -114,7 +414,7 @@ animation: show9 2s infinite; /* Указываем название анима�
 animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
 animation-delay: 0.3s; /* Задержка перед началом */
 }
-
+@media screen and (min-width:701px) {
 @keyframes show9{
 0%{
 -moz-transform: translate(0px, 0px); /*Элемент полностью прозрачный (невидимый)*/
@@ -142,6 +442,8 @@ transform: translate(0px, 0px);
 -o-transform: translate(0px, 0px);
 }
 }
+}
+
 
 
 /*-------------------------------------------------------------------------------------------------------------------1*/
@@ -249,7 +551,7 @@ animation: show2 1s 1; /* Указываем название анимации, 
 animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
 animation-delay: 0.0s; /* Задержка перед началом */
 }
-
+@media screen and (min-width:701px) {
 @keyframes show2{
 0%{
 -moz-transform: translate(0, 0px); /** Firefox **/
@@ -264,7 +566,7 @@ transform: translate(0,-320px);
 -o-transform: translate(0,-320px); /** Opera **/
 }
 }
-
+}
 .anim-show4{
 -moz-transform: translate(0, 0px); /*Элемент полностью прозрачный (невидимый)*/
 transform: translate(0, 0px);
@@ -275,7 +577,7 @@ animation: show4 1s 1; /* Указываем название анимации, 
 animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
 animation-delay: 0.0s; /* Задержка перед началом */
 }
-
+@media screen and (min-width:701px) {
 @keyframes show4{
 0%{
 -moz-transform: translate(0, 0px); /** Firefox **/
@@ -290,3 +592,5 @@ transform: translate(0,-320px);
 -o-transform: translate(0,-320px); /** Opera **/
 }
 }
+}
+

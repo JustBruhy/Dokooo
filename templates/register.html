@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/favicon-96x96.png') }}">
     <link rel="manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -18,43 +19,34 @@
 
 
 </head>
-
-<div class="block3 fontz anim-show7">
-    <p>Regular Link Service</p>
-    <p>To remove the restriction of saving links, you need to register</p>
-    <p>Create - Create a link</p>
-    <p>Edit-Change the description and link</p>
-    <p>Delete - Delete the added link</p>
-    <img style="width: 250px; height: 200px;" src="https://media1.tenor.com/images/05ee3dabc247d55a9133d66922bf6edd/tenor.gif?itemid=14541069">
-
-
-</div>
-
-<body>
 <div class="block2" id="cat">
 <a href="http://127.0.0.1:5000">
   <img class="izo" src="https://wmpics.pics/di-7CJR.png">
 </a>
 </div>
-{% if current_user.is_authenticated %}
-<div class=" blockcatlogin">
-    <a>Hi {{ current_user.username }}!</a>
-<img class="izo" width="60" height="70" src="https://wmpics.pics/di-VNQZ.png">
-</div>
-{% endif %}
-<div class="fontz block4 anim-show3">
-    <p>お帰りなさい</p>
+
+
+
+<div class="blocklogin fontz anim-show3">
+  <form action="/register" method="post">
+    <input class="appearblock" placeholder="Username" name="username" type="text" style="padding-left: 5px; margin-top: 30px; margin-left: 4%;" />
+    <input class="appearblock" placeholder="Email" name="email" type="email" style="padding-left: 5px; margin-top: 30px; margin-left: 4%;" />
+    <input class="appearblock" placeholder="Password" name="password" type="password" style="padding-left: 5px; margin-top: 30px; margin-left: 4%;" />
+    <button class="btn first signbutton" >Sign Up</button>
+  </form>
+
 </div>
 
-<div class="multi-button anim-show2" >
+<body>
+<div class="multi-button anim-show2">
     {% if current_user.is_authenticated %}
-  <button >About</button>
-  <button onclick="window.location.href = '{{ url_for("register") }}';">Creator</button>
-  <button onclick="window.location.href = '{{ url_for("login") }}';">Login</button>
+  <button onclick="window.location.href = '{{ url_for("about") }};">About</button>
+  <button onclick="window.location.href = '{{ url_for("register") }};">Creator</button>
+  <button onclick="window.location.href = '{{ url_for("login") }};">Login</button>
      {% else %}
-    <button >About</button>
-  <button  onclick="window.location.href = '{{ url_for("reg") }}';">Register</button>
-  <button onclick="window.location.href = '{{ url_for("login") }}'; ">Login</button>
+    <button onclick="window.location.href = '{{ url_for("about") }};">About</button>
+  <button >Register</button>
+  <button onclick="window.location.href = '{{ url_for("login") }}';">Login</button>
     {% endif %}
 </div>
 
